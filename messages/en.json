@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "common": {
+      "applicationName": "Hodl Me Please",
+      "keywords": "montáž, technická montáž, montážní práce, montážní služby, montážní firma, montážní technik, montážní techniky, montážní technika",
+      "authors": "Hodl Me Please",
+      "publisher": "Hodl Me Please"
+    },
+    "homepage": {
+      "title": "Hodl Me Please",
+      "description": "Hodl Me Please - hodl the frog"
+    }
+  },
+  "Header": {
+    "about": "About",
+    "web2": "Web 2.0",
+    "web3": "Web 3.0"
+  },
+  "CardSection": {
+    "title": "Basic Info About Us",
+    "card": {
+      "one": {
+        "title": "Liguidity Pool Burned",
+        "description": "We have burned the LP to warm the frog"
+      },
+      "two": {
+        "title": "Supply",
+        "description": "We have 1B hugs"
+      },
+      "three": {
+        "title": "Zero Tax",
+        "description": "Hugs are tax free"
+      }
+    }
+  },
+  "PageSection": {
+    "title": "FROG NEEDS HUGS TOO",
+    "one": {
+      "title": "Frog is looking for frens",
+      "paragraph": {
+        "one": "Frog needs frens",
+        "two": "Frog needs hugs",
+        "three": "Frog needs you",
+        "four": "Frog needs you to hodl",
+        "five": "Share the love with your frens",
+        "six": "Hodl the frog"
+      }
+    },
+    "two": {
+      "paragraph": {
+        "one": "CA: ",
+        "two": "8qxqSjzfSgZ4x31eGhjYaMwZHNS6avA3BZYnKj3TiAYt"
+      }
+    }
+  },
+  "Footer": {
+    "brandName": "Hodl Me Please",
+    "tagline": "Frog is Love, Frog is Life",
+    "poweredBy": "Powered by the frog",
+    "copyright": "Copyright ©2024 Hodl Me Please"
+  }
+}
