@@ -38,7 +38,7 @@ export default function Layout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={pick(messages, "Header")}>
-          <Header/>
+          <Header />
         </NextIntlClientProvider>
         <main>{children}</main>
         <Footer />
