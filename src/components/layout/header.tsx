@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -16,25 +16,24 @@ export default function Header() {
       <div className="fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg">
         <div className="flex w-full bg-transparent justify-between text-gray-dark">
           <div className="flex items-center justify-center px-3 py-2 lg:px-3 lg:py-7">
-            <Link href="/">
+            <Link href="/" className="cursor-pointer">
               <Image
-                src="/logo.svg"
+                src="/images/logo.png"
                 alt="Your Logo"
                 width={214}
                 height={42}
-                priority
               />
             </Link>
           </div>
           <div className="flex justify-between">
             <nav className="hidden lg:flex gap-16 2xl:gap-10 sm:w-full sm:h-full items-center">
-              <Link href={`/about`} className="text-body cursor-pointer">
+              <Link href="/about" className="text-body cursor-pointer">
                 {t("about")}
               </Link>
-              <Link href={`/web2`} className="text-body cursor-pointer">
+              <Link href="/web2" className="text-body cursor-pointer">
                 {t("web2")}
               </Link>
-              <Link href={`/web3`} className="text-body cursor-pointer">
+              <Link href="/web3" className="text-body cursor-pointer">
                 {t("web3")}
               </Link>
             </nav>
@@ -52,8 +51,6 @@ export default function Header() {
               </button>
             </div>
           </div>
-
-          <div className="hidden justify-end items-center lg:flex"></div>
         </div>
       </div>
       <div
@@ -63,19 +60,19 @@ export default function Header() {
       >
         <nav className="border-solid border-b-2 bg-[#FFF] h-full overflow-y-auto flex flex-col items-center justify-center text-gray-dark mt-12 gap-4">
           <Link
-            href={`/about`}
+            href="/about"
             className="transition-color duration-200 text-body cursor-pointer"
           >
             {t("about")}
           </Link>
           <Link
-            href={`/web2`}
+            href="/web2"
             className="transition-color duration-200 text-body cursor-pointer"
           >
             {t("web2")}
           </Link>
           <Link
-            href={`/web3`}
+            href="/web3"
             className="transition-color duration-200 text-body cursor-pointer"
           >
             {t("web3")}

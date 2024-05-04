@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: t("common.authors") }],
     publisher: t("common.publisher"),
     robots: "index, follow",
-    icons: "/Icon.svg",
+    icons: "/images/Icon.svg",
   };
 }
 
@@ -37,11 +37,13 @@ export default function Layout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={pick(messages, "Header")}>
-          <Header />
-        </NextIntlClientProvider>
-        <main>{children}</main>
-        <Footer />
+        <div>
+          <NextIntlClientProvider messages={pick(messages, "Header")}>
+            <Header />
+          </NextIntlClientProvider>
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
