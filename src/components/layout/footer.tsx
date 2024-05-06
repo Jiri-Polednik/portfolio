@@ -9,7 +9,12 @@ const Footer = () => {
     <footer className="bg-gray-dark text-white py-8 lg:p-4">
       <div className="flex flex-col gap-8 lg:flex-row lg:justify-around items-center">
         <div className="flex flex-col">
-          <Image src={"/Icon.svg"} alt={"logo"} width={150} height={30} />
+          <Image
+            src={"/images/Icon.svg"}
+            alt={"logo"}
+            width={150}
+            height={30}
+          />
           <p className="text-sm mt-2">{t("tagline")}</p>
         </div>
 

@@ -35,11 +35,11 @@ body {
 }
 
 .bg-gradient-primary {
-  @apply bg-gradient-to-r from-purple to-violet;
+  @apply bg-gradient-to-r from-violet-dark to-violet-light;
 }
 
 .bg-gradient-secondary {
-  @apply bg-gradient-to-r from-red to-yellow;
+  @apply bg-gradient-to-r from-yellow-dark to-yellow-light;
 }
 
 //Button

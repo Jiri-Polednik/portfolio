@@ -20,18 +20,25 @@ module.exports = {
         bold: 700,
       },
       colors: {
-        red: "#E25E66",
-        yellow: "#EB9F42",
-        orange: "#F2724A",
-        purple: "#7E1AFF",
-        violet: "#8866FF",
-        gray: {
-          light: "#F5F5F5",
-          dark: "#212121",
+        violet: {
+          light: "#A163F4",
+          dark: "#4C1D95",
+        },
+        yellow: {
+          light: "#FFC107",
+          dark: "#FFA000",
+        },
+        blue: {
+          light: "#007BFF",
+          dark: "#003049",
         },
         green: {
           light: "#6FCF97",
           dark: "#219653",
+        },
+        gray: {
+          light: "#F5F5F5",
+          dark: "#212121",
         },
       },
     },
@@ -53,11 +60,13 @@ module.exports = {
     },
   },
   safelist: [
-    "bg-violet",
-    "bg-purple",
-    "bg-orange",
-    "bg-yellow",
-    "bg-red",
-    "bg-gray-light",
+    "bg-violet-light",
+    "bg-yellow-light",
+    "bg-blue-light",
+    "bg-green-light",
+    "bg-violet-dark",
+    "bg-yellow-dark",
+    "bg-blue-dark",
+    "bg-green-dark",
   ],
 };

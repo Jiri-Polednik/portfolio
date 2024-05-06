@@ -1,7 +1,13 @@
-export default function Index() {
-  return (
-    <div>
-      <h1>Web 3</h1>
-    </div>
-  );
+import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
+
+export default function Index({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
+  const t = useTranslations();
+
+  return <div></div>;
 }

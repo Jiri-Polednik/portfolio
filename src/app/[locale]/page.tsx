@@ -60,6 +60,7 @@ export default function Index({
             </TextContent>
           </div>
         }
+        bgColor={"green-dark"}
       />
 
       <PageSection
@@ -86,7 +87,7 @@ export default function Index({
             </div>
           </div>
         }
-        darkBackground={true}
+        bgColor={"blue-light"}
       />
 
       <PageSection
@@ -98,6 +99,7 @@ export default function Index({
             </p>
           </div>
         }
+        bgColor={"yellow-light"}
       />
     </div>
   );

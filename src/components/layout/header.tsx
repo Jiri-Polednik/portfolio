@@ -20,16 +20,13 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Your Logo"
-                width={214}
+                width={42}
                 height={42}
               />
             </Link>
           </div>
           <div className="flex justify-between">
             <nav className="hidden lg:flex gap-16 2xl:gap-10 sm:w-full sm:h-full items-center">
-              <Link href="/about" className="text-body cursor-pointer">
-                {t("about")}
-              </Link>
               <Link href="/web2" className="text-body cursor-pointer">
                 {t("web2")}
               </Link>
@@ -59,12 +56,6 @@ export default function Header() {
         }`}
       >
         <nav className="border-solid border-b-2 bg-[#FFF] h-full overflow-y-auto flex flex-col items-center justify-center text-gray-dark mt-12 gap-4">
-          <Link
-            href="/about"
-            className="transition-color duration-200 text-body cursor-pointer"
-          >
-            {t("about")}
-          </Link>
           <Link
             href="/web2"
             className="transition-color duration-200 text-body cursor-pointer"

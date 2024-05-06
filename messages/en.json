@@ -1,62 +1,78 @@
 {
   "Metadata": {
     "common": {
-      "applicationName": "Hodl Me Please",
-      "keywords": "montáž, technická montáž, montážní práce, montážní služby, montážní firma, montážní technik, montážní techniky, montážní technika",
-      "authors": "Hodl Me Please",
-      "publisher": "Hodl Me Please"
+      "applicationName": "Jiří Poledník - Portfolio",
+      "keywords": "developer, web developer, web designer, web development, web design, portfolio, Jiří Poledník, Jiří, Poledník, Jiří Poledník Portfolio, Jiří Poledník Web Developer, Jiří Poledník Web Designer, Jiří Poledník Web Development, Jiří Poledník Web Design",
+      "authors": "Jiří Poledník",
+      "publisher": "Jiří Poledník"
     },
     "homepage": {
-      "title": "Hodl Me Please",
-      "description": "Hodl Me Please - hodl the frog"
+      "title": "Jiří Poledník - Portfolio",
+      "description": "Jiří Poledník - Portfolio"
+    },
+    "web2": {
+      "title": "Web 2.0",
+      "description": "Web 2.0 - the web we know"
+    },
+    "web3": {
+      "title": "Web 3.0",
+      "description": "Web 3.0 - the web we deserve"
     }
   },
   "Header": {
-    "about": "About",
     "web2": "Web 2.0",
     "web3": "Web 3.0"
   },
-  "CardSection": {
-    "title": "Basic Info About Us",
-    "card": {
-      "one": {
-        "title": "Liguidity Pool Burned",
-        "description": "We have burned the LP to warm the frog"
+  "HomePage": {},
+  "Web2": {
+    "Anewgo": {
+      "title": "Anewgo - Frontend Developer",
+      "period": "November 2021 - October 2022",
+      "description": {
+        "one": "At Anewgo, my role as a Frontend Developer involved crafting an engaging interface for an online platform aimed at simplifying real estate transactions. This platform serves as a key tool for U.S. homeowners and real estate professionals.",
+        "two": "I utilized React.js to build dynamic user interfaces, ensuring that the platform was both intuitive and efficient for users. My contributions were critical in facilitating smooth and secure property listings and transactions.",
+        "three": "The technologies I employed included advanced frameworks and tools such as React Query and JavaScript, which helped in optimizing data handling and UI responsiveness."
       },
-      "two": {
-        "title": "Supply",
-        "description": "We have 1B hugs"
-      },
-      "three": {
-        "title": "Zero Tax",
-        "description": "Hugs are tax free"
-      }
-    }
-  },
-  "PageSection": {
-    "title": "FROG NEEDS HUGS TOO",
-    "one": {
-      "title": "Frog is looking for frens",
-      "paragraph": {
-        "one": "Frog needs frens",
-        "two": "Frog needs hugs",
-        "three": "Frog needs you",
-        "four": "Frog needs you to hodl",
-        "five": "Share the love with your frens",
-        "six": "Hodl the frog"
-      }
+      "technologies": "React.js, React Query, JavaScript, HTML, CSS, Git, Jira, Confluence",
+      "link": "https://anewgo.com/"
     },
-    "two": {
-      "paragraph": {
-        "one": "CA: ",
-        "two": "8qxqSjzfSgZ4x31eGhjYaMwZHNS6avA3BZYnKj3TiAYt"
-      }
+    "Ondrasek": {
+      "title": "Ondrášek - Fullstack Developer",
+      "period": "November 2022 - August 2023",
+      "description": {
+        "one": "During my tenure with Ondrášek, I developed a robust content management system (CMS) for managing digital content related to printing machine spare parts.",
+        "two": "The project not only enhanced the operational capabilities of the CMS but also laid the groundwork for the initial development phase of an e-commerce platform tailored for the business's unique needs.",
+        "three": "My work involved using modern web technologies such as NextJS and TypeScript, enhancing site manageability and scalability."
+      },
+      "technologies": "React, TypeScript, JavaScript, GraphQL, NextJS, HTML, CSS, Git",
+      "link": "https://www.ondrasek.cz/"
+    },
+    "eMetsa": {
+      "title": "eMetsa - Frontend Developer",
+      "period": "December 2023 - Present",
+      "description": {
+        "one": "As part of the eMetsa project, I focused on transforming forest management in Finland by developing a user-friendly digital interface.",
+        "two": "My contributions included the integration of financial planning tools and real-time analytics, which significantly aided forest owners in making informed decisions about their properties.",
+        "three": "This role utilized my skills in React and TypeScript, along with my knowledge of Node.js and Azure DevOps, to create a seamless user experience across various digital platforms."
+      },
+      "technologies": "React, TypeScript, JavaScript, Node.js, Azure DevOps, HTML, CSS, Git"
+    },
+    "PackDesigner": {
+      "title": "PackDesigner - Full Stack Developer",
+      "period": "August 2023 - Present",
+      "description": {
+        "one": "In my role as Full Stack Developer for PackDesigner, I spearheaded the development of a new packaging design application, blending innovative design with technical functionality.",
+        "two": "I leveraged technologies such as ThreeJS and React Fibre to create detailed and interactive 3D visualizations of packaging designs, enabling users to visualize changes in real-time.",
+        "three": "The backend was powered by Node.JS with Azure serverless functions, which I managed to ensure high performance and scalability."
+      },
+      "technologies": "React, TypeScript, JavaScript, React Fibre, ThreeJS, Drei, Node.JS, Azure DevOps, HTML, CSS, Git"
     }
   },
+  "Web3": {},
   "Footer": {
-    "brandName": "Hodl Me Please",
-    "tagline": "Frog is Love, Frog is Life",
-    "poweredBy": "Powered by the frog",
-    "copyright": "Copyright ©2024 Hodl Me Please"
+    "brandName": "Jiří Poledník",
+    "tagline": "Building future layer by layer",
+    "poweredBy": "Powered by Jiří Poledník",
+    "copyright": "Copyright ©2024 Jiří Poledník"
   }
 }
