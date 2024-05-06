@@ -2,10 +2,11 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import "@styles/globals.scss";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import TextContent from "@components/textContent";
 import PageSection from "@components/pageSection";
-import Card from "@components/ui/card";
 import React from "react";
+import Image from "next/image";
+import Button from "@components/ui/button";
+import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
@@ -25,81 +26,102 @@ export default function Index({
 
   return (
     <div>
+      <div className={"flex justify-center bg-blue-light"}>
+        <p className={"text-4xl font-bold text-center text-gray-dark mt-4"}>
+          {t("HomePage.title")}
+        </p>
+      </div>
       <PageSection
-        title={t("PageSection.title")}
         leftContent={
-          <div>
-            <img
-              className={"lg:w-3/4 m-auto"}
-              src={"/images/logo.png"}
-              alt={"Image 1"}
-            />
+          <div className={"flex justify-center"}>
+            <div className={"flex justify-center w-2/3"}>
+              <a href={"https://anewgo.com"} target={"_blank"}>
+                <Image
+                  src={"/images/anewgo.jpg"}
+                  alt={"Image 1"}
+                  width={500}
+                  height={500}
+                  className={"rounded-2xl my-auto"}
+                />
+              </a>
+            </div>
           </div>
         }
         rightContent={
-          <div>
-            <TextContent title={t("PageSection.one.title")}>
-              <p className="text-gray-dark pt-5 text-opacity-75">
-                {t("PageSection.one.paragraph.one")}
-              </p>
-              <p className="text-gray-dark text-opacity-75">
-                {t("PageSection.one.paragraph.two")}
-              </p>
-              <p className="text-gray-dark text-opacity-75">
-                {t("PageSection.one.paragraph.three")}
-              </p>
-              <p className="text-gray-dark text-opacity-75">
-                {t("PageSection.one.paragraph.four")}
-              </p>
-              <p className="text-gray-dark pt-5 text-opacity-75">
-                {t("PageSection.one.paragraph.five")}
-              </p>
-              <p className="text-gray-dark text-opacity-75">
-                {t("PageSection.one.paragraph.six")}
-              </p>
-            </TextContent>
-          </div>
-        }
-        bgColor={"green-dark"}
-      />
-
-      <PageSection
-        content={
-          <div className={"w-full flex-col flex items-center"}>
-            <div className="w-5/6">
-              <div className="lg:flex lg:flex-row flex-grow lg:justify-between lg:items-stretch h-full flex-col justify-center items-start gap-8 mb-4">
-                <Card
-                  title={t("CardSection.card.one.title")}
-                  description={t("CardSection.card.one.description")}
-                  icon={"/images/fire.svg"}
-                />
-                <Card
-                  title={t("CardSection.card.two.title")}
-                  description={t("CardSection.card.two.description")}
-                  icon={"/images/supply.svg"}
-                />
-                <Card
-                  title={t("CardSection.card.three.title")}
-                  description={t("CardSection.card.three.description")}
-                  icon={"/images/tax.svg"}
-                />
-              </div>
-            </div>
+          <div
+            className={
+              "w-2/3 flex-col justify-center items-center text-gray-dark"
+            }
+          >
+            <p className={"text-center mt-4"}>
+              {t("HomePage.description.one")}
+            </p>
+            <p className={"text-center mt-4"}>
+              {t("HomePage.description.two")}
+            </p>
+            <p className={"text-center mt-4"}>
+              {t("HomePage.description.three")}
+            </p>
           </div>
         }
         bgColor={"blue-light"}
       />
-
       <PageSection
+        bgColor={"blue-dark"}
         content={
-          <div className="flex justify-center py-12">
-            <p className="text-6xl">{t("PageSection.two.paragraph.one")}</p>
-            <p className="text-6xl break-all">
-              {t("PageSection.two.paragraph.two")}
-            </p>
+          <div
+            className={
+              "flex flex-col justify-center text-gray-light w-full gap-8 py-5"
+            }
+          >
+            <div>
+              <p className={"text-2xl font-bold text-center"}>
+                {t("HomePage.explore")}
+              </p>
+            </div>
+            <div className={"flex gap-4 justify-center"}>
+              <Link href="/web2" className="cursor-pointer">
+                <Button>{t("HomePage.web2")}</Button>
+              </Link>
+              <Link href="/web3" className="cursor-pointer">
+                <Button>{t("HomePage.web3")}</Button>
+              </Link>
+            </div>
+
+            <div>
+              <p className={"text-center mt-4"}>{t("HomePage.email")}</p>
+            </div>
+
+            <div className={"flex gap-4 justify-center"}>
+              <a
+                href={t("HomePage.linkedinLink")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-1"
+              >
+                <Image
+                  src={"/images/linkedin.svg"}
+                  alt={"LinkedIn"}
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a
+                href={t("HomePage.githubLink")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-1"
+              >
+                <Image
+                  src={"/images/github.svg"}
+                  alt={"GitHub"}
+                  width={50}
+                  height={50}
+                />
+              </a>
+            </div>
           </div>
         }
-        bgColor={"yellow-light"}
       />
     </div>
   );

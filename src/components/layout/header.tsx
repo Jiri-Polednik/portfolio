@@ -13,16 +13,11 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg">
+      <div className="fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg border-b-2">
         <div className="flex w-full bg-transparent justify-between text-gray-dark">
           <div className="flex items-center justify-center px-3 py-2 lg:px-3 lg:py-7">
             <Link href="/" className="cursor-pointer">
-              <Image
-                src="/images/logo.png"
-                alt="Your Logo"
-                width={42}
-                height={42}
-              />
+              <Image src="/images/logo.png" alt="Logo" width={42} height={42} />
             </Link>
           </div>
           <div className="flex justify-between">
@@ -70,6 +65,7 @@ export default function Header() {
           </Link>
         </nav>
       </div>
+
       <div className="h-[60px] lg:h-[100px]" />
     </>
   );

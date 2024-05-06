@@ -23,17 +23,32 @@
     "web2": "Web 2.0",
     "web3": "Web 3.0"
   },
-  "HomePage": {},
+  "HomePage": {
+    "title": "About Me",
+    "description": {
+      "one": "I am a passionate web developer with a strong background in frontend and backend technologies. My journey in the tech industry began with a keen interest in web development, which has since evolved into a full-fledged career.",
+      "two": "I have worked on a variety of projects, ranging from e-commerce platforms to content management systems, and have gained valuable experience in both frontend and backend development. My expertise lies in crafting engaging user interfaces and building scalable web applications that meet the unique needs of clients.",
+      "three": "I am always eager to learn new technologies and stay up-to-date with the latest trends in web development. I am excited about the future of the web and look forward to contributing to the next generation of digital experiences."
+    },
+    "explore": "Explore My Work",
+    "web2": "Web 2.0",
+    "web3": "Web 3.0",
+    "contact": "Contact Me",
+    "email": "email: jirkapolednik@gmail.com",
+    "socials": "Socials",
+    "linkedinLink": "https://www.linkedin.com/in/jiri-polednik/",
+    "githubLink": "https://github.com/Jiri-Polednik"
+  },
   "Web2": {
     "Anewgo": {
       "title": "Anewgo - Frontend Developer",
       "period": "November 2021 - October 2022",
       "description": {
         "one": "At Anewgo, my role as a Frontend Developer involved crafting an engaging interface for an online platform aimed at simplifying real estate transactions. This platform serves as a key tool for U.S. homeowners and real estate professionals.",
-        "two": "I utilized React.js to build dynamic user interfaces, ensuring that the platform was both intuitive and efficient for users. My contributions were critical in facilitating smooth and secure property listings and transactions.",
+        "two": "I utilized React to build dynamic user interfaces, ensuring that the platform was both intuitive and efficient for users. My contributions were critical in facilitating smooth and secure property listings and transactions.",
         "three": "The technologies I employed included advanced frameworks and tools such as React Query and JavaScript, which helped in optimizing data handling and UI responsiveness."
       },
-      "technologies": "React.js, React Query, JavaScript, HTML, CSS, Git, Jira, Confluence",
+      "technologies": "React, React Query, JavaScript, HTML, CSS, Git, Jira, Confluence",
       "link": "https://anewgo.com/"
     },
     "Ondrasek": {
@@ -68,10 +83,29 @@
       "technologies": "React, TypeScript, JavaScript, React Fibre, ThreeJS, Drei, Node.JS, Azure DevOps, HTML, CSS, Git"
     }
   },
-  "Web3": {},
+  "Web3": {
+    "HodlMePlease": {
+      "title": "HodlMePlease - Blockchain Developer",
+      "period": "May 2024 - Present",
+      "description": {
+        "one": "I have created my own token on the Solana blockchain called HodlMePlease.",
+        "two": "The token is based around internet memes and aims to provide a fun and engaging experience for users."
+      },
+      "technologies": "Solana, Web3.js, React, TypeScript, JavaScript, HTML, CSS, Git"
+    },
+    "DecentralDice": {
+      "title": "DecentralDice - Smart Contract Developer",
+      "period": "May 2024 - Present",
+      "description": {
+        "one": "DecentralDice is a decentralized application (dApp) that allows users to play various games of chance using blockchain technology.",
+        "two": "I am developing the smart contracts for the game, ensuring that they are secure, efficient, and tamper-proof."
+      },
+      "technologies": "Ethereum, Solidity, Web3.js, React, TypeScript, JavaScript, HTML, CSS, Git"
+    }
+  },
   "Footer": {
     "brandName": "Jiří Poledník",
-    "tagline": "Building future layer by layer",
+    "tagline": "Building the future layer by layer",
     "poweredBy": "Powered by Jiří Poledník",
     "copyright": "Copyright ©2024 Jiří Poledník"
   }

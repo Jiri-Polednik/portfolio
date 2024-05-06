@@ -37,13 +37,11 @@ export default function Layout({
   return (
     <html lang={locale}>
       <body className={"bg-yellow-light"}>
-        <div>
-          <NextIntlClientProvider messages={pick(messages, "Header")}>
-            <Header />
-          </NextIntlClientProvider>
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <NextIntlClientProvider messages={pick(messages, "Header")}>
+          <Header />
+        </NextIntlClientProvider>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
