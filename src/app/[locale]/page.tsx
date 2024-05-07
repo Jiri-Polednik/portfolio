@@ -81,10 +81,10 @@ export default function Index({
             </div>
             <div className={"flex gap-4 justify-center"}>
               <Link href="/web2" className="cursor-pointer">
-                <Button>{t("HomePage.web2")}</Button>
+                <Button variant={"primary"}>{t("HomePage.web2")}</Button>
               </Link>
               <Link href="/web3" className="cursor-pointer">
-                <Button>{t("HomePage.web3")}</Button>
+                <Button variant={"primary"}>{t("HomePage.web3")}</Button>
               </Link>
             </div>
 

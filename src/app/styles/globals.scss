@@ -38,7 +38,7 @@ body {
 }
 
 .bg-gradient-primary {
-  @apply bg-gradient-to-r from-violet-dark to-violet-light;
+  @apply bg-gradient-to-r from-blue-dark to-blue-light;
 }
 
 .bg-gradient-secondary {
@@ -48,14 +48,11 @@ body {
 //Button
 .button {
   &-primary {
-    @apply bg-gradient-primary;
+    @apply bg-gradient-primary border border-white rounded-2xl;
 
     > span:first-child {
-      @apply bg-transparent flex items-center justify-center px-4 rounded-full;
+      @apply bg-transparent flex items-center justify-center p-3;
 
-      > span {
-        @apply bg-gradient-primary;
-      }
       > span:first-child {
         @apply text-white;
       }

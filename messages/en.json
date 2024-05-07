@@ -21,7 +21,8 @@
   },
   "Header": {
     "web2": "Web 2.0",
-    "web3": "Web 3.0"
+    "web3": "Web 3.0",
+    "home": "Home"
   },
   "HomePage": {
     "title": "About Me",
