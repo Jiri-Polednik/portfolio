@@ -37,7 +37,7 @@ export default function Index({
             <div className={"flex justify-center w-2/3"}>
               <a href={"https://anewgo.com"} target={"_blank"}>
                 <Image
-                  src={"/images/anewgo.jpg"}
+                  src={"/images/aboutme.png"}
                   alt={"Image 1"}
                   width={500}
                   height={500}
