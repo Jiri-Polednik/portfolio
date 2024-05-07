@@ -40,14 +40,20 @@ export default function Index({
           </div>
         }
         leftContent={
-          <div className={"flex justify-center items-center w-2/3"}>
-            <Image
-              src={"/images/hodlMePlease.png"}
-              alt={"eMetsa Project Image"}
-              width={300}
-              height={300}
-              className={"rounded-2xl my-auto"}
-            />
+          <div className={"flex justify-center items-center w-full"}>
+            <a
+              href={"https://www.hodlmeplease.com/"}
+              target={"_blank"}
+              rel={"noreferrer noopener"}
+            >
+              <Image
+                src={"/images/hodlMePlease.png"}
+                alt={"eMetsa Project Image"}
+                width={300}
+                height={300}
+                className={"rounded-2xl"}
+              />
+            </a>
           </div>
         }
         bgColor={"yellow-light"}
@@ -75,7 +81,7 @@ export default function Index({
           </div>
         }
         rightContent={
-          <div className={"flex justify-center items-center w-2/3"}>
+          <div className={"flex justify-center items-center w-full"}>
             <Image
               src={"/images/decentralDice.svg"}
               alt={"PackDesigner Project Image"}

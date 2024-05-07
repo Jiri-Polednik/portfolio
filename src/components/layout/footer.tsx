@@ -20,37 +20,29 @@ const Footer = () => {
 
         <div className="flex gap-4">
           <a
-            href="https://t.me/hodlmepleasesol"
+            href={t("HomePage.linkedinLink")}
             target="_blank"
             rel="noopener noreferrer"
             className="mx-1"
           >
             <Image
-              src={"/images/telegram.svg"}
-              alt={"Facebook"}
-              width={25}
-              height={25}
+              src={"/images/linkedin.svg"}
+              alt={"LinkedIn"}
+              width={50}
+              height={50}
             />
           </a>
           <a
-            href="https://twitter.com/HodlMePleaseSol"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-1"
-          >
-            <Image src={"/images/x.svg"} alt={"X"} width={25} height={25} />
-          </a>
-          <a
-            href="https://solscan.io/token/8qxqSjzfSgZ4x31eGhjYaMwZHNS6avA3BZYnKj3TiAYt"
+            href={t("HomePage.githubLink")}
             target="_blank"
             rel="noopener noreferrer"
             className="mx-1"
           >
             <Image
-              src={"/images/solana.svg"}
-              alt={"X"}
-              width={25}
-              height={25}
+              src={"/images/github.svg"}
+              alt={"GitHub"}
+              width={50}
+              height={50}
             />
           </a>
         </div>

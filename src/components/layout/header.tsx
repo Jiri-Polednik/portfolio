@@ -15,9 +15,9 @@ export default function Header() {
     <>
       <div className="fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg border-b-2">
         <div className="flex w-full bg-transparent justify-between text-gray-dark">
-          <div className="flex items-center justify-center px-3 py-2 lg:px-3 lg:py-7">
+          <div className="flex items-center justify-center px-3 py-2 lg:px-3">
             <Link href="/" className="cursor-pointer">
-              <Image src="/images/logo.png" alt="Logo" width={42} height={42} />
+              <Image src="/images/logo.png" alt="Logo" width={80} height={80} />
             </Link>
           </div>
           <div className="flex justify-between lg:px-8">
