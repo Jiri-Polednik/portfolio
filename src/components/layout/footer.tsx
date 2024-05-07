@@ -20,7 +20,7 @@ const Footer = () => {
 
         <div className="flex gap-4">
           <a
-            href={t("HomePage.linkedinLink")}
+            href={t("linkedinLink")}
             target="_blank"
             rel="noopener noreferrer"
             className="mx-1"
@@ -33,7 +33,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href={t("HomePage.githubLink")}
+            href={t("githubLink")}
             target="_blank"
             rel="noopener noreferrer"
             className="mx-1"
