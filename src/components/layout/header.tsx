@@ -1,78 +1,101 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useState } from "react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-export default function Header() {
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
   const t = useTranslations("Header");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <>
-      <div className="fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg border-b-2">
-        <div className="flex w-full bg-transparent justify-between text-gray-dark">
-          <div className="flex items-center justify-center px-3 py-2 lg:px-3">
-            <Link href="/" className="cursor-pointer">
-              <Image src="/images/logo.png" alt="Logo" width={80} height={80} />
-            </Link>
-          </div>
-          <div className="flex justify-between lg:px-8">
-            <nav className="hidden lg:flex gap-16 2xl:gap-10 sm:w-full sm:h-full items-center">
-              <Link href="/" className="text-body cursor-pointer">
-                {t("home")}
-              </Link>
-              <Link href="/web2" className="text-body cursor-pointer">
-                {t("web2")}
-              </Link>
-              <Link href="/web3" className="text-body cursor-pointer">
-                {t("web3")}
-              </Link>
-            </nav>
-            <div className="lg:hidden flex items-center justify-end my-auto">
-              <button
-                onClick={toggleMobileMenu}
-                className="z-[501] ml-auto pr-2"
-              >
-                <Image
-                  src={`${isMobileMenuOpen ? "/images/xmark.svg" : "/images/bars.svg"}`}
-                  alt="Menu Toggle"
-                  width={24}
-                  height={24}
+    <nav
+      className={`bg-gray-800 bg-opacity-75 p-4 fixed w-full top-0 left-0 z-50 transition-transform duration-300 ${isVisible ? "transform-none" : "-translate-y-full"}`}
+    >
+      <div className="container mx-auto flex items-center justify-between">
+        <div className="text-white text-lg font-bold">
+          <Link href="/" className="text-white">
+            <Image
+              src={"/images/logo.png"}
+              alt={"logo"}
+              width={50}
+              height={50}
+            />
+          </Link>
+        </div>
+        <div className="hidden md:flex space-x-4">
+          <Link href="/web2" className="text-white">
+            {t("web2")}
+          </Link>
+          <Link href="/web3" className="text-white">
+            {t("web3")}
+          </Link>
+        </div>
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {isOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
                 />
-              </button>
-            </div>
-          </div>
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              )}
+            </svg>
+          </button>
         </div>
       </div>
       <div
-        className={`fixed inset-0 transition-transform duration-200 ease-in-out z-[500] w-full max-w-[1500px] h-[200px] lg:hidden text-gray-dark ${
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`md:hidden overflow-hidden transition-max-height duration-300 ${isOpen ? "max-h-40" : "max-h-0"}`}
       >
-        <nav className="border-solid border-b-2 bg-[#FFF] h-full overflow-y-auto flex flex-col items-center justify-center text-gray-dark mt-12 gap-4">
-          <Link href="/" className="text-body cursor-pointer">
-            {t("home")}
-          </Link>
-          <Link
-            href="/web2"
-            className="transition-color duration-200 text-body cursor-pointer"
-          >
-            {t("web2")}
-          </Link>
-          <Link
-            href="/web3"
-            className="transition-color duration-200 text-body cursor-pointer"
-          >
-            {t("web3")}
-          </Link>
-        </nav>
+        <Link href="/web2" className="block px-4 py-2 text-white">
+          {t("web2")}
+        </Link>
+        <Link href="/web3" className="block px-4 py-2 text-white">
+          {t("web3")}
+        </Link>
       </div>
-
-      <div className="h-[60px] lg:h-[100px]" />
-    </>
+    </nav>
   );
-}
+};
+
+export default Navbar;

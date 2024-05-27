@@ -26,24 +26,49 @@ export default function Index({
 
   return (
     <div>
+      <div className={"flex min-h-screen w-full"}>
+        <div className={"flex h-full w-full justify-center"}>
+          <Image
+            src={"/images/heroBannerBackground.jpg"}
+            alt={"Logo"}
+            layout="fill"
+            objectFit="cover"
+          />
+          <div
+            className={"absolute top-0 w-full h-full bg-black bg-opacity-60"}
+          />
+          <div className={"absolute top-0 w-full h-full flex justify-center"}>
+            <div
+              className={"flex flex-col justify-center items-center px-8 gap-8"}
+            >
+              <p className={"text-4xl font-bold text-white text-center"}>
+                {t("HomePage.welcome")}
+              </p>
+              <p className={"text-2xl text-white text-center"}>
+                {t("HomePage.subtitle")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className={"flex justify-center bg-blue-light"}>
         <p className={"text-4xl font-bold text-center text-gray-dark mt-4"}>
           {t("HomePage.title")}
         </p>
       </div>
+
       <PageSection
         leftContent={
           <div className={"flex justify-center"}>
             <div className={"flex justify-center w-2/3"}>
-              <a href={"https://anewgo.com"} target={"_blank"}>
-                <Image
-                  src={"/images/aboutme.png"}
-                  alt={"Image 1"}
-                  width={500}
-                  height={500}
-                  className={"rounded-2xl my-auto"}
-                />
-              </a>
+              <Image
+                src={"/images/aboutMe.jpg"}
+                alt={"Image 1"}
+                width={500}
+                height={500}
+                className={"rounded-2xl my-auto"}
+              />
             </div>
           </div>
         }

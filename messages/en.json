@@ -20,8 +20,8 @@
     }
   },
   "Header": {
-    "web2": "Web 2.0",
-    "web3": "Web 3.0",
+    "web2": "Web Development",
+    "web3": "Decentralized Applications",
     "home": "Home"
   },
   "HomePage": {
@@ -31,9 +31,11 @@
       "two": "I have worked on a variety of projects, ranging from e-commerce platforms to content management systems, and have gained valuable experience in both frontend and backend development. My expertise lies in crafting engaging user interfaces and building scalable web applications that meet the unique needs of clients.",
       "three": "I am always eager to learn new technologies and stay up-to-date with the latest trends in web development. I am excited about the future of the web and look forward to contributing to the next generation of digital experiences."
     },
+    "welcome": "Building the future layer by layer",
+    "subtitle": "Web Developer | Web Designer | Web Development | Web Design",
     "explore": "Explore My Work",
-    "web2": "Web 2.0",
-    "web3": "Web 3.0",
+    "web2": "Web Development",
+    "web3": "Decentralized Applications",
     "contact": "Contact Me",
     "email": "email: jirkapolednik@gmail.com",
     "socials": "Socials",
