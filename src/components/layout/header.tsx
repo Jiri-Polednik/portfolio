@@ -1,19 +1,43 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import classNames from "classnames";
 
 export default function Header() {
   const t = useTranslations("Header");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  const handleScroll = useCallback(() => {
+    const currentScrollPos = window.scrollY;
+    setVisible(currentScrollPos > 50);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
     <>
-      <div className="fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg border-b-2">
+      <div
+        className={classNames(
+          "fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg border-b-2 transition-transform duration-300",
+          {
+            "transform -translate-y-full": !visible,
+            "transform translate-y-0": visible,
+          },
+        )}
+      >
         <div className="flex w-full bg-transparent justify-between text-gray-dark">
           <div className="flex items-center justify-center px-3 py-2 lg:px-3">
             <Link href="/" className="cursor-pointer">
@@ -71,8 +95,15 @@ export default function Header() {
           </Link>
         </nav>
       </div>
-
-      <div className="h-[60px] lg:h-[100px]" />
+      <div
+        className={classNames(
+          "h-[60px] lg:h-[100px] lg:transition-transform lg:duration-300",
+          {
+            "lg:transform lg:translate-y-0": !visible,
+            "lg:transform lg:-translate-y-full": visible,
+          },
+        )}
+      />
     </>
   );
 }
