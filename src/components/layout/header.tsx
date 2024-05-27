@@ -29,6 +29,7 @@ export default function Header() {
 
   return (
     <>
+      {/* Desktop Navigation */}
       <div
         className={classNames(
           "fixed top-0 z-[2] flex flex-col gap-0 w-full bg-white shadow-lg border-b-2 transition-transform duration-300",
@@ -56,45 +57,47 @@ export default function Header() {
                 {t("web3")}
               </Link>
             </nav>
-            <div className="lg:hidden flex items-center justify-end my-auto">
-              <button
-                onClick={toggleMobileMenu}
-                className="z-[501] ml-auto pr-2"
-              >
-                <Image
-                  src={`${isMobileMenuOpen ? "/images/xmark.svg" : "/images/bars.svg"}`}
-                  alt="Menu Toggle"
-                  width={24}
-                  height={24}
-                />
-              </button>
-            </div>
           </div>
         </div>
       </div>
-      <div
-        className={`fixed inset-0 transition-transform duration-200 ease-in-out z-[500] w-full max-w-[1500px] h-[200px] lg:hidden text-gray-dark ${
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <nav className="border-solid border-b-2 bg-[#FFF] h-full overflow-y-auto flex flex-col items-center justify-center text-gray-dark mt-12 gap-4">
-          <Link href="/" className="text-body cursor-pointer">
-            {t("home")}
-          </Link>
-          <Link
-            href="/web2"
-            className="transition-color duration-200 text-body cursor-pointer"
-          >
-            {t("web2")}
-          </Link>
-          <Link
-            href="/web3"
-            className="transition-color duration-200 text-body cursor-pointer"
-          >
-            {t("web3")}
-          </Link>
-        </nav>
+
+      {/* Mobile Navigation */}
+      <div className="lg:hidden flex items-center justify-between px-4 py-2 fixed top-0 w-full bg-white z-[500] shadow-md">
+        <Link href="/" className="cursor-pointer">
+          <Image src="/images/logo.png" alt="Logo" width={40} height={40} />
+        </Link>
+        <button onClick={toggleMobileMenu} className="z-[501] ml-auto pr-2">
+          <Image
+            src={`${isMobileMenuOpen ? "/images/xmark.svg" : "/images/bars.svg"}`}
+            alt="Menu Toggle"
+            width={24}
+            height={24}
+          />
+        </button>
       </div>
+
+      {isMobileMenuOpen && (
+        <div className=" fixed inset-0 z-[500] w-full h-1/4 bg-white text-gray-dark flex flex-col items-center justify-center overflow-y-auto transition-transform duration-300 transform translate-y-0">
+          <nav className="flex flex-col items-center gap-4 mt-12">
+            <Link href="/" className="text-body cursor-pointer">
+              {t("home")}
+            </Link>
+            <Link
+              href="/web2"
+              className="transition-color duration-200 text-body cursor-pointer"
+            >
+              {t("web2")}
+            </Link>
+            <Link
+              href="/web3"
+              className="transition-color duration-200 text-body cursor-pointer"
+            >
+              {t("web3")}
+            </Link>
+          </nav>
+        </div>
+      )}
+
       <div
         className={classNames(
           "h-[60px] lg:h-[100px] lg:transition-transform lg:duration-300",
