@@ -33,10 +33,14 @@ const PageSection: React.FC<PageSectionProps> = ({
         </div>
       )}
       <div
-        className={`flex ${reverseOnMobile ? "flex-col-reverse" : "flex-col"} md:flex-row md:space-x-8 bg-${bgColor} `}
+        className={`flex ${reverseOnMobile ? "flex-col-reverse" : "flex-col"} md:flex-row md:space-x-8 bg-${bgColor} items-center justify-center`}
       >
-        <div className="w-full md:w-1/2 p-5 m-auto">{leftContent}</div>
-        <div className="w-full md:w-1/2 p-5 m-auto">{rightContent}</div>
+        <div className="flex w-full md:w-1/2 p-5 items-center justify-center">
+          {leftContent}
+        </div>
+        <div className="flex w-full md:w-1/2 p-5 items-center justify-center">
+          {rightContent}
+        </div>
       </div>
       {content && <div className={`bg-${bgColor}`}>{content}</div>}
     </div>
