@@ -84,6 +84,16 @@
         "three": "The backend was powered by Node.JS with Azure serverless functions, which I managed to ensure high performance and scalability."
       },
       "technologies": "React, TypeScript, JavaScript, React Fibre, ThreeJS, Drei, Node.JS, Azure DevOps, HTML, CSS, Git"
+    },
+    "Smontazi": {
+      "title": "S Montazi - Web Developer",
+      "period": "February 2024 - Present",
+      "description": {
+        "one": "At S Montazi, I am responsible for developing a web application that streamlines the process of finding and hiring home improvement professionals.",
+        "two": "My role involves creating a user-friendly interface that connects homeowners with qualified professionals, ensuring a seamless experience for both parties.",
+        "three": "I have utilized React and TypeScript to build a responsive and intuitive platform that simplifies the search and booking process for users."
+      },
+      "technologies": "React, TypeScript, JavaScript, HTML, CSS, Git"
     }
   },
   "Web3": {
@@ -105,6 +115,10 @@
       },
       "technologies": "Ethereum, Solidity, Web3.js, React, TypeScript, JavaScript, HTML, CSS, Git"
     }
+  },
+  "Common": {
+    "link": "link to project",
+    "missingLink": "Link could not be provided"
   },
   "Footer": {
     "brandName": "Jiří Poledník",

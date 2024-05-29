@@ -2,6 +2,8 @@ import PageSection from "@components/pageSection";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
+import Button from "@components/ui/button";
+import React from "react";
 
 export default function Index({
   params: { locale },
@@ -15,18 +17,16 @@ export default function Index({
     <div>
       <PageSection
         leftContent={
-          <div className={"flex justify-center"}>
-            <div className={"flex justify-center w-2/3"}>
-              <a href={"https://anewgo.com"} target={"_blank"}>
-                <Image
-                  src={"/images/anewgo.jpg"}
-                  alt={"Image 1"}
-                  width={500}
-                  height={500}
-                  className={"rounded-2xl my-auto"}
-                />
-              </a>
-            </div>
+          <div className={"flex justify-center items-center w-2/3"}>
+            <a href={"https://anewgo.com"} target={"_blank"}>
+              <Image
+                src={"/images/anewgo.jpg"}
+                alt={"Anewgo Project Image"}
+                width={500}
+                height={500}
+                className={"rounded-2xl my-auto"}
+              />
+            </a>
           </div>
         }
         rightContent={
@@ -53,6 +53,11 @@ export default function Index({
             <p className={"text-center mt-4"}>
               {t("Web2.Anewgo.technologies")}
             </p>
+            <div className={"flex items-center justify-center w-full py-4"}>
+              <a href={"https://anewgo.com"} target={"_blank"}>
+                <Button variant={"primary"}>{t("Common.link")}</Button>
+              </a>
+            </div>
           </div>
         }
         bgColor={"violet-light"}
@@ -83,6 +88,11 @@ export default function Index({
               <p className={"text-center mt-4"}>
                 {t("Web2.Ondrasek.technologies")}
               </p>
+              <div className={"flex items-center justify-center w-full py-4"}>
+                <a href={"https://www.ondrasek.cz/"} target={"_blank"}>
+                  <Button variant={"primary"}>{t("Common.link")}</Button>
+                </a>
+              </div>
             </div>
           </div>
         }
@@ -91,7 +101,7 @@ export default function Index({
             <a href={"https://www.ondrasek.cz/"} target={"_blank"}>
               <Image
                 src={"/images/ondrasek.jpg"}
-                alt={"Image 1"}
+                alt={"Ondrasek Project Image"}
                 width={500}
                 height={500}
                 className={"rounded-2xl my-auto"}
@@ -127,16 +137,19 @@ export default function Index({
               <p className={"text-center mt-4"}>
                 {t("Web2.eMetsa.technologies")}
               </p>
+              <div className={"flex items-center justify-center w-full py-4"}>
+                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
+              </div>
             </div>
           </div>
         }
         leftContent={
           <div className={"flex justify-center items-center w-2/3"}>
             <Image
-              src={"/images/storaEnso.svg"}
-              alt={"eMetsa Project Image"}
-              width={300}
-              height={300}
+              src={"/images/missingScreenshot.jpg"}
+              alt={"emetsa Project Image"}
+              width={500}
+              height={500}
               className={"rounded-2xl my-auto"}
             />
           </div>
@@ -165,21 +178,71 @@ export default function Index({
               <p className={"text-center mt-4"}>
                 {t("Web2.PackDesigner.technologies")}
               </p>
+              <div className={"flex items-center justify-center w-full py-4"}>
+                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
+              </div>
             </div>
           </div>
         }
         rightContent={
           <div className={"flex justify-center items-center w-2/3"}>
             <Image
-              src={"/images/storaEnso.svg"}
-              alt={"PackDesigner Project Image"}
-              width={300}
-              height={300}
+              src={"/images/missingScreenshot.jpg"}
+              alt={"Pack Designer Project Image"}
+              width={500}
+              height={500}
               className={"rounded-2xl my-auto"}
             />
           </div>
         }
         bgColor={"violet-dark"}
+      />
+      <PageSection
+        leftContent={
+          <div className={"flex justify-center items-center w-2/3"}>
+            <a href={"https://smontazi.cz/"} target={"_blank"}>
+              <Image
+                src={"/images/SMontazi.jpg"}
+                alt={"Smontazi Project Image"}
+                width={500}
+                height={500}
+                className={"rounded-2xl my-auto"}
+              />
+            </a>
+          </div>
+        }
+        rightContent={
+          <div
+            className={
+              "w-2/3 flex-col justify-center items-center text-gray-dark"
+            }
+          >
+            <p className={"text-2xl font-bold text-center"}>
+              {t("Web2.Smontazi.title")}
+            </p>
+            <p className={"text-center mt-4 text-xl"}>
+              {t("Web2.Smontazi.period")}
+            </p>
+            <p className={"text-center mt-4"}>
+              {t("Web2.Smontazi.description.one")}
+            </p>
+            <p className={"text-center mt-4"}>
+              {t("Web2.Smontazi.description.two")}
+            </p>
+            <p className={"text-center mt-4"}>
+              {t("Web2.Smontazi.description.three")}
+            </p>
+            <p className={"text-center mt-4"}>
+              {t("Web2.Smontazi.technologies")}
+            </p>
+            <div className={"flex items-center justify-center w-full py-4"}>
+              <a href={"https://smontazi.cz/"} target={"_blank"}>
+                <Button variant={"primary"}>{t("Common.link")}</Button>
+              </a>
+            </div>
+          </div>
+        }
+        bgColor={"violet-light"}
       />
     </div>
   );
