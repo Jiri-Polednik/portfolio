@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import PageSection from "@components/pageSection";
 import Image from "next/image";
+import Button from "@components/ui/button";
+import React from "react";
 
 export default function Index({
   params: { locale },
@@ -36,6 +38,11 @@ export default function Index({
               <p className={"text-center mt-4"}>
                 {t("Web3.HodlMePlease.technologies")}
               </p>
+              <div className={"flex items-center justify-center w-full py-4"}>
+                <a href={"https://www.hodlmeplease.com"} target={"_blank"}>
+                  <Button variant={"primary"}>{t("Common.link")}</Button>
+                </a>
+              </div>
             </div>
           </div>
         }
@@ -48,7 +55,7 @@ export default function Index({
             >
               <Image
                 src={"/images/hodlMePlease.png"}
-                alt={"eMetsa Project Image"}
+                alt={"Hodl Me Please Project Image"}
                 width={300}
                 height={300}
                 className={"rounded-2xl"}
@@ -77,6 +84,9 @@ export default function Index({
               <p className={"text-center mt-4"}>
                 {t("Web3.DecentralDice.technologies")}
               </p>
+              <div className={"flex items-center justify-center w-full py-4"}>
+                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
+              </div>
             </div>
           </div>
         }
@@ -84,7 +94,7 @@ export default function Index({
           <div className={"flex justify-center items-center w-full"}>
             <Image
               src={"/images/decentralDice.svg"}
-              alt={"PackDesigner Project Image"}
+              alt={"Decentral Dice Project Image"}
               width={300}
               height={300}
               className={"rounded-2xl my-auto"}

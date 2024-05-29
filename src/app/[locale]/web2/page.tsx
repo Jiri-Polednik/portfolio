@@ -138,9 +138,7 @@ export default function Index({
                 {t("Web2.eMetsa.technologies")}
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
-                <a href={"#"} target={"_blank"}>
-                  <Button variant={"primary"}>{t("Common.missingLink")}</Button>
-                </a>
+                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
               </div>
             </div>
           </div>
@@ -181,9 +179,7 @@ export default function Index({
                 {t("Web2.PackDesigner.technologies")}
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
-                <a href={"#"} target={"_blank"}>
-                  <Button variant={"primary"}>{t("Common.missingLink")}</Button>
-                </a>
+                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
               </div>
             </div>
           </div>
