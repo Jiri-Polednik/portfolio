@@ -46,6 +46,9 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="hidden md:flex space-x-4">
+          <Link href="/" className="text-white">
+            {t("home")}
+          </Link>
           <Link href="/web2" className="text-white">
             {t("web2")}
           </Link>
@@ -87,6 +90,9 @@ const Navbar: React.FC = () => {
       <div
         className={`md:hidden overflow-hidden transition-max-height duration-300 ${isOpen ? "max-h-40" : "max-h-0"}`}
       >
+        <Link href="/" className="block px-4 py-2 text-white">
+          {t("home")}
+        </Link>
         <Link href="/web2" className="block px-4 py-2 text-white">
           {t("web2")}
         </Link>
