@@ -26,7 +26,7 @@ export default function Index({
 
   return (
     <div>
-      <div className={"flex min-h-svh w-full"}>
+      <div className={"flex min-h-dvh w-full"}>
         <div className={"flex h-full w-full justify-center"}>
           <Image
             src={"/images/heroBannerBackground.jpg"}
