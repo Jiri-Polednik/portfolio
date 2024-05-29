@@ -1,11 +1,16 @@
 type ButtonProps = {
-  variant?: "primary" | "secondary";
+  variant?: "full" | "outlined";
   children: React.ReactNode;
+  bgColor: string;
 };
 
-export default function Button({ variant = "primary", children }: ButtonProps) {
+export default function Button({
+  variant = "full",
+  children,
+  bgColor,
+}: ButtonProps) {
   return (
-    <button className={`button-${variant}`}>
+    <button className={`button-${variant} bg-${bgColor}`}>
       <span>
         <span>{children}</span>
       </span>

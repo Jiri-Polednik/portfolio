@@ -40,7 +40,9 @@ export default function Index({
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
                 <a href={"https://www.hodlmeplease.com"} target={"_blank"}>
-                  <Button variant={"primary"}>{t("Common.link")}</Button>
+                  <Button variant={"full"} bgColor={"orange-light"}>
+                    {t("Common.link")}
+                  </Button>
                 </a>
               </div>
             </div>
@@ -85,7 +87,9 @@ export default function Index({
                 {t("Web3.DecentralDice.technologies")}
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
-                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
+                <Button variant={"full"} bgColor={"gray-dark"}>
+                  {t("Common.missingLink")}
+                </Button>
               </div>
             </div>
           </div>

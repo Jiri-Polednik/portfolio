@@ -33,18 +33,9 @@
   @apply text-sm lg:text-base;
 }
 
-.bg-gradient-primary {
-  @apply bg-gradient-to-r from-blue-dark to-blue-light;
-}
-
-.bg-gradient-secondary {
-  @apply bg-gradient-to-r from-yellow-dark to-yellow-light;
-}
-
-//Button
 .button {
-  &-primary {
-    @apply bg-gradient-primary border border-white rounded-2xl;
+  &-full {
+    @apply border border-white rounded-2xl;
 
     > span:first-child {
       @apply bg-transparent flex items-center justify-center p-3;
@@ -55,16 +46,13 @@
     }
   }
 
-  &-secondary {
-    @apply bg-gradient-secondary;
+  &-outlined {
+    @apply border-2 rounded-2xl;
 
     > span:first-child {
-      @apply bg-white flex items-center justify-center px-4 rounded-full;
+      @apply flex items-center justify-center px-4 rounded-full;
 
       > span {
-        @apply bg-gradient-secondary;
-      }
-      > span:first-child {
         @apply bg-clip-text text-transparent;
       }
     }

@@ -55,7 +55,9 @@ export default function Index({
             </p>
             <div className={"flex items-center justify-center w-full py-4"}>
               <a href={"https://anewgo.com"} target={"_blank"}>
-                <Button variant={"primary"}>{t("Common.link")}</Button>
+                <Button variant={"full"} bgColor={"violet-dark"}>
+                  {t("Common.link")}
+                </Button>
               </a>
             </div>
           </div>
@@ -90,7 +92,9 @@ export default function Index({
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
                 <a href={"https://www.ondrasek.cz/"} target={"_blank"}>
-                  <Button variant={"primary"}>{t("Common.link")}</Button>
+                  <Button variant={"full"} bgColor={"violet-light"}>
+                    {t("Common.link")}
+                  </Button>
                 </a>
               </div>
             </div>
@@ -138,7 +142,9 @@ export default function Index({
                 {t("Web2.eMetsa.technologies")}
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
-                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
+                <Button variant={"full"} bgColor={"gray-dark"}>
+                  {t("Common.missingLink")}
+                </Button>
               </div>
             </div>
           </div>
@@ -179,7 +185,9 @@ export default function Index({
                 {t("Web2.PackDesigner.technologies")}
               </p>
               <div className={"flex items-center justify-center w-full py-4"}>
-                <Button variant={"primary"}>{t("Common.missingLink")}</Button>
+                <Button variant={"full"} bgColor={"gray-dark"}>
+                  {t("Common.missingLink")}
+                </Button>
               </div>
             </div>
           </div>
@@ -237,7 +245,9 @@ export default function Index({
             </p>
             <div className={"flex items-center justify-center w-full py-4"}>
               <a href={"https://smontazi.cz/"} target={"_blank"}>
-                <Button variant={"primary"}>{t("Common.link")}</Button>
+                <Button variant={"full"} bgColor={"violet-dark"}>
+                  {t("Common.link")}
+                </Button>
               </a>
             </div>
           </div>
