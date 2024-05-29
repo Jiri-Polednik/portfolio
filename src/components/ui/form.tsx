@@ -122,7 +122,7 @@ const Form = () => {
             </div>
           </div>
           <div>
-            <Button>{t("SubmitButton")}</Button>
+            <Button bgColor={"violet-light"}>{t("SubmitButton")}</Button>
           </div>
         </div>
       </form>
