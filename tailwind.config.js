@@ -28,6 +28,10 @@ module.exports = {
           light: "#FFC107",
           dark: "#FFA000",
         },
+        orange: {
+          light: "#FF5722",
+          dark: "#E64A19",
+        },
         blue: {
           light: "#007BFF",
           dark: "#003049",
@@ -68,5 +72,9 @@ module.exports = {
     "bg-yellow-dark",
     "bg-blue-dark",
     "bg-green-dark",
+    "bg-orange-light",
+    "bg-orange-dark",
+    "bg-gray-light",
+    "bg-gray-dark",
   ],
 };
