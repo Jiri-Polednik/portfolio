@@ -26,13 +26,13 @@ export default function Index({
 
   return (
     <div>
-      <div className={"flex min-h-screen w-full"}>
+      <div className={"flex min-h-dvh w-full"}>
         <div className={"flex h-full w-full justify-center"}>
           <Image
             src={"/images/heroBannerBackground.jpg"}
             alt={"Logo"}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={"object-cover"}
           />
           <div
             className={"absolute top-0 w-full h-full bg-black bg-opacity-60"}
