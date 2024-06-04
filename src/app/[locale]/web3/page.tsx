@@ -68,6 +68,7 @@ export default function Index({
         bgColor={"yellow-light"}
       />
       <PageSection
+        reverseOnMobile
         leftContent={
           <div className={"flex justify-center text-gray-light"}>
             <div className={"w-2/3 flex-col justify-center items-center"}>
